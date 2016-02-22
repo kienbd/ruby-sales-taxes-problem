@@ -21,6 +21,6 @@
 
 
 ```
-ruby run filename
+ruby run.rb filename
 
 ```
