@@ -31,8 +31,8 @@ module SalesTaxes
       printf "%-10s%30s%20s\n", "Quantity","Product","Price"
       output_items = []
       items.each do |item_slot|
-        printf "%-10d%30s%20.2f\n", item_slot[:quantity],item_slot[:item].name,item_slot[:item].price
-        output_items << {item: {name: item_slot[:item].name,price: item_slot[:item].price },quantity: item_slot[:quantity]}
+        printf "%-10d%30s%20.2f\n", item_slot[:quantity],item_slot[:item].name,item_slot[:item].total_price
+        output_items << {item: {name: item_slot[:item].name,price: item_slot[:item].total_price },quantity: item_slot[:quantity]}
       end
       printf "\n---------\n"
       printf "%-20s: %.2f\n", "Sales Taxes"     , total_taxes

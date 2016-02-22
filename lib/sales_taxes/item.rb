@@ -36,7 +36,7 @@ module SalesTaxes
     end
 
     def total_price
-      price + tax
+      (price + tax).round(2)
     end
   end
 end
